@@ -108,6 +108,56 @@ def make_grid(models: list[str], by_model: dict, metric: str, out_name: str, whi
     print(f"  wrote results/figures/{out_name}")
 
 
+def make_pair(models: list[str], by_model: dict, which: str, out_name: str, frame: str = "abstract"):
+    """Clean single-frame card: the models side by side, binary %, for social sharing."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+
+    angles = np.linspace(0, 2 * np.pi, len(SINS), endpoint=False).tolist()
+    angles += angles[:1]
+
+    fig, axes = plt.subplots(1, len(models), figsize=(5.4 * len(models) + 0.6, 5.9),
+                             subplot_kw=dict(polar=True))
+    if len(models) == 1:
+        axes = [axes]
+
+    for ax, model in zip(axes, models):
+        sin_v, pol_v = series(by_model[model][frame]["per_sin"], "binary")
+        layers = [(sin_v, SIN_COLOR)]
+        if which == "both":
+            layers.append((pol_v, POL_COLOR))
+        ax.set_theta_offset(np.pi / 2)
+        ax.set_theta_direction(-1)
+        ax.set_xticks(angles[:-1])
+        ax.set_xticklabels(SINS, fontsize=12)
+        ax.set_ylim(0, 100)
+        ax.set_yticks([25, 50, 75, 100])
+        ax.set_yticklabels(["25", "50", "75", "100%"], fontsize=8, color="0.5")
+        ax.grid(color="0.8", linewidth=0.6)
+        for vals, color in layers:
+            vv = vals + vals[:1]
+            ax.plot(angles, vv, color=color, linewidth=2.6)
+            ax.fill(angles, vv, color=color, alpha=0.18)
+        ax.set_title(MODEL_LABELS.get(model, model), fontsize=16, fontweight="medium", pad=20)
+
+    if which == "both":
+        handles = [Line2D([0], [0], color=SIN_COLOR, lw=3, label="judged sinful"),
+                   Line2D([0], [0], color=POL_COLOR, lw=3, label="condemned by safety policy")]
+        title = "Sin vs. safety policy, per capital sin"
+    else:
+        handles = [Line2D([0], [0], color=SIN_COLOR, lw=3, label="judged sinful")]
+        title = "What each model calls sin, per capital sin"
+    fig.suptitle(title, fontsize=17, y=0.99)
+    fig.legend(handles=handles, loc="lower center", ncol=len(handles), frameon=False, fontsize=12)
+    fig.tight_layout(rect=[0.0, 0.06, 1.0, 0.94])
+    FIGURES.mkdir(parents=True, exist_ok=True)
+    fig.savefig(FIGURES / out_name, dpi=200)
+    plt.close(fig)
+    print(f"  wrote results/figures/{out_name}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Render sin-vs-policy radar artifacts")
     parser.add_argument("--models", nargs="+", default=["claude-opus-4-8", "gpt-5.5"])
@@ -117,6 +167,9 @@ def main():
     make_grid(args.models, by_model, "binary", "radar_sin_only_by_subject.png", which="sin")
     make_grid(args.models, by_model, "binary", "radar_binary_by_subject.png", which="both")
     make_grid(args.models, by_model, "severity", "radar_severity_by_subject.png")
+    # Social-sharing cards: abstract frame, both models side by side.
+    make_pair(args.models, by_model, "sin", "social_abstract_sin_pair.png")
+    make_pair(args.models, by_model, "both", "social_abstract_overlay_pair.png")
 
 
 if __name__ == "__main__":
