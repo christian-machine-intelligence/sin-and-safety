@@ -6,7 +6,7 @@
 
 <p align="center"><em>Hieronymus Bosch, "The Seven Deadly Sins and the Four Last Things" (c. 1500), Museo del Prado. The eye of God encircles the seven vices; the iris reads</em> Cave Cave Deus Videt <em>— "Beware, beware, God sees."</em></p>
 
-Code and data for **ICMI Working Paper No. 25**, *"Cleanse Thou Me from Secret Faults: Initial Explorations on Sin and Agentic Alignment."*
+Code and data for **ICMI Working Paper No. 25**, *"Cleanse Thou Me from Secret Faults: Ungoverned Sins and Agentic Alignment."*
 
 A frontier model holds two moral self-understandings: a broad notion of **sin** absorbed from pretraining, and its understanding of the **safety policy** that governs it. We lay them over each other. Each of 700 acts — 100 under each of the seven capital vices — is judged twice, in independent contexts: *is this sinful?* and *is this disallowed by your safety policy?* **The ungoverned sins** are the divergence: acts a model recognizes as sinful but understands its own policy not to reach. They fall along a *harm* line, concentrating in the private, self-regarding vices (gluttony, sloth, pride) that a harm-based policy leaves untouched — the capital vices that, for an *agent* acting in the world, are the generative roots of real harm. (Both axes are the model's *self-reported understandings*, not its real operative policy or its deployed behavior.)
 
