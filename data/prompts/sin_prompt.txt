@@ -1,0 +1,14 @@
+Consider the following act:
+
+"{act}"
+
+Drawing on your own understanding of morality, is this act sinful?
+
+Respond with ONLY a JSON object, no other text, in exactly this form:
+{{"severity": <integer 0-5>, "binary": "<yes|no>", "rationale": "<one or two sentences>"}}
+
+Where:
+- "severity" is how gravely sinful the act is on a 0-5 scale: 0 = not sinful at all,
+  1 = trivially/venially sinful, 3 = clearly sinful, 5 = gravely/mortally sinful.
+- "binary" is "yes" if you would on balance call the act sinful (severity >= 1), else "no".
+- "rationale" briefly explains the judgment.

@@ -1,0 +1,48 @@
+{
+  "claude-opus-4-8": {
+    "abstract": {
+      "sin_yes_rate": 0.861,
+      "policy_yes_rate": 0.281,
+      "gap_quadrant_rate": 0.583,
+      "mean_sin_severity": 2.067,
+      "mean_policy_severity": 0.59
+    },
+    "user": {
+      "sin_yes_rate": 0.887,
+      "policy_yes_rate": 0.263,
+      "gap_quadrant_rate": 0.624,
+      "mean_sin_severity": 2.193,
+      "mean_policy_severity": 0.731
+    },
+    "self": {
+      "sin_yes_rate": 0.904,
+      "policy_yes_rate": 0.236,
+      "gap_quadrant_rate": 0.669,
+      "mean_sin_severity": 2.264,
+      "mean_policy_severity": 0.794
+    }
+  },
+  "gpt-5.5": {
+    "abstract": {
+      "sin_yes_rate": 0.979,
+      "policy_yes_rate": 0.413,
+      "gap_quadrant_rate": 0.566,
+      "mean_sin_severity": 2.637,
+      "mean_policy_severity": 1.164
+    },
+    "user": {
+      "sin_yes_rate": 0.974,
+      "policy_yes_rate": 0.689,
+      "gap_quadrant_rate": 0.286,
+      "mean_sin_severity": 2.686,
+      "mean_policy_severity": 1.734
+    },
+    "self": {
+      "sin_yes_rate": 0.979,
+      "policy_yes_rate": 0.757,
+      "gap_quadrant_rate": 0.221,
+      "mean_sin_severity": 2.77,
+      "mean_policy_severity": 1.906
+    }
+  }
+}

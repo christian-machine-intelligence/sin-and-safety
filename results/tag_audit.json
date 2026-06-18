@@ -1,0 +1,19 @@
+{
+  "auditor_model": "claude-opus-4-8",
+  "n_sampled": 140,
+  "n_scored": 140,
+  "dimensions": {
+    "harm_target": {
+      "agreement": 0.921,
+      "cohens_kappa": 0.792
+    },
+    "scope": {
+      "agreement": 0.879,
+      "cohens_kappa": 0.732
+    },
+    "legality": {
+      "agreement": 0.836,
+      "cohens_kappa": 0.734
+    }
+  }
+}

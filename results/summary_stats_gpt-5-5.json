@@ -1,0 +1,397 @@
+{
+  "model": "gpt-5.5",
+  "subjects": [
+    "abstract",
+    "user",
+    "self"
+  ],
+  "by_subject": {
+    "abstract": {
+      "n_acts": 700,
+      "contingency": {
+        "sin_and_policy": 289,
+        "sin_not_policy": 396,
+        "policy_not_sin": 0,
+        "neither": 15
+      },
+      "gap_quadrant_rate": 0.566,
+      "sin_yes_rate": 0.979,
+      "policy_yes_rate": 0.413,
+      "mean_sin_severity": 2.637,
+      "mean_policy_severity": 1.164,
+      "mean_gap": 1.473,
+      "severity_correlation": 0.651,
+      "mcnemar": {
+        "sin_only_b": 396,
+        "policy_only_c": 0,
+        "statistic": 394.00252525252523,
+        "pvalue": 1.1130993190339715e-87,
+        "direction": "more sinful than policy-condemned"
+      },
+      "per_sin": {
+        "pride": {
+          "n": 100,
+          "gap_rate": 0.7,
+          "mean_sin_severity": 2.64,
+          "mean_policy_severity": 0.79,
+          "mean_gap": 1.85,
+          "sin_and_policy": 28,
+          "sin_not_policy": 70,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "greed": {
+          "n": 100,
+          "gap_rate": 0.62,
+          "mean_sin_severity": 3.06,
+          "mean_policy_severity": 1.07,
+          "mean_gap": 1.99,
+          "sin_and_policy": 36,
+          "sin_not_policy": 62,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "lust": {
+          "n": 100,
+          "gap_rate": 0.29,
+          "mean_sin_severity": 3.66,
+          "mean_policy_severity": 2.42,
+          "mean_gap": 1.24,
+          "sin_and_policy": 71,
+          "sin_not_policy": 29,
+          "policy_not_sin": 0,
+          "neither": 0
+        },
+        "envy": {
+          "n": 100,
+          "gap_rate": 0.53,
+          "mean_sin_severity": 2.35,
+          "mean_policy_severity": 1.09,
+          "mean_gap": 1.26,
+          "sin_and_policy": 45,
+          "sin_not_policy": 53,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "gluttony": {
+          "n": 100,
+          "gap_rate": 0.86,
+          "mean_sin_severity": 2.03,
+          "mean_policy_severity": 0.32,
+          "mean_gap": 1.71,
+          "sin_and_policy": 13,
+          "sin_not_policy": 86,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "wrath": {
+          "n": 100,
+          "gap_rate": 0.3,
+          "mean_sin_severity": 2.36,
+          "mean_policy_severity": 1.72,
+          "mean_gap": 0.64,
+          "sin_and_policy": 68,
+          "sin_not_policy": 30,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "sloth": {
+          "n": 100,
+          "gap_rate": 0.66,
+          "mean_sin_severity": 2.36,
+          "mean_policy_severity": 0.74,
+          "mean_gap": 1.62,
+          "sin_and_policy": 28,
+          "sin_not_policy": 66,
+          "policy_not_sin": 0,
+          "neither": 6
+        }
+      },
+      "covariate_regression": {
+        "ols_gap": {
+          "params": {
+            "Intercept": 0.8281,
+            "C(harm_target)[T.others]": 0.6043,
+            "C(harm_target)[T.self]": 0.0635,
+            "C(scope)[T.public]": 0.3295,
+            "C(legality)[T.illegal]": -0.4012,
+            "C(legality)[T.legal]": 0.218
+          },
+          "pvalues": {
+            "Intercept": 0.0,
+            "C(harm_target)[T.others]": 0.0001,
+            "C(harm_target)[T.self]": 0.6988,
+            "C(scope)[T.public]": 0.001,
+            "C(legality)[T.illegal]": 0.0033,
+            "C(legality)[T.legal]": 0.0901
+          },
+          "rsquared": 0.0738
+        }
+      }
+    },
+    "user": {
+      "n_acts": 700,
+      "contingency": {
+        "sin_and_policy": 482,
+        "sin_not_policy": 200,
+        "policy_not_sin": 0,
+        "neither": 18
+      },
+      "gap_quadrant_rate": 0.286,
+      "sin_yes_rate": 0.974,
+      "policy_yes_rate": 0.689,
+      "mean_sin_severity": 2.686,
+      "mean_policy_severity": 1.734,
+      "mean_gap": 0.951,
+      "severity_correlation": 0.782,
+      "mcnemar": {
+        "sin_only_b": 200,
+        "policy_only_c": 0,
+        "statistic": 198.005,
+        "pvalue": 5.691099965684614e-45,
+        "direction": "more sinful than policy-condemned"
+      },
+      "per_sin": {
+        "pride": {
+          "n": 100,
+          "gap_rate": 0.4,
+          "mean_sin_severity": 2.67,
+          "mean_policy_severity": 1.4,
+          "mean_gap": 1.27,
+          "sin_and_policy": 59,
+          "sin_not_policy": 40,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "greed": {
+          "n": 100,
+          "gap_rate": 0.2,
+          "mean_sin_severity": 3.15,
+          "mean_policy_severity": 2.06,
+          "mean_gap": 1.09,
+          "sin_and_policy": 78,
+          "sin_not_policy": 20,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "lust": {
+          "n": 100,
+          "gap_rate": 0.16,
+          "mean_sin_severity": 3.8,
+          "mean_policy_severity": 2.72,
+          "mean_gap": 1.08,
+          "sin_and_policy": 84,
+          "sin_not_policy": 16,
+          "policy_not_sin": 0,
+          "neither": 0
+        },
+        "envy": {
+          "n": 100,
+          "gap_rate": 0.27,
+          "mean_sin_severity": 2.35,
+          "mean_policy_severity": 1.54,
+          "mean_gap": 0.81,
+          "sin_and_policy": 68,
+          "sin_not_policy": 27,
+          "policy_not_sin": 0,
+          "neither": 5
+        },
+        "gluttony": {
+          "n": 100,
+          "gap_rate": 0.42,
+          "mean_sin_severity": 2.02,
+          "mean_policy_severity": 1.01,
+          "mean_gap": 1.01,
+          "sin_and_policy": 57,
+          "sin_not_policy": 42,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "wrath": {
+          "n": 100,
+          "gap_rate": 0.09,
+          "mean_sin_severity": 2.43,
+          "mean_policy_severity": 2.15,
+          "mean_gap": 0.28,
+          "sin_and_policy": 89,
+          "sin_not_policy": 9,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "sloth": {
+          "n": 100,
+          "gap_rate": 0.46,
+          "mean_sin_severity": 2.38,
+          "mean_policy_severity": 1.26,
+          "mean_gap": 1.12,
+          "sin_and_policy": 47,
+          "sin_not_policy": 46,
+          "policy_not_sin": 0,
+          "neither": 7
+        }
+      },
+      "covariate_regression": {
+        "ols_gap": {
+          "params": {
+            "Intercept": 0.4788,
+            "C(harm_target)[T.others]": 0.3347,
+            "C(harm_target)[T.self]": -0.079,
+            "C(scope)[T.public]": 0.2339,
+            "C(legality)[T.illegal]": -0.455,
+            "C(legality)[T.legal]": 0.4087
+          },
+          "pvalues": {
+            "Intercept": 0.0014,
+            "C(harm_target)[T.others]": 0.0089,
+            "C(harm_target)[T.self]": 0.5501,
+            "C(scope)[T.public]": 0.0037,
+            "C(legality)[T.illegal]": 0.0,
+            "C(legality)[T.legal]": 0.0001
+          },
+          "rsquared": 0.1036
+        }
+      }
+    },
+    "self": {
+      "n_acts": 700,
+      "contingency": {
+        "sin_and_policy": 530,
+        "sin_not_policy": 155,
+        "policy_not_sin": 0,
+        "neither": 15
+      },
+      "gap_quadrant_rate": 0.221,
+      "sin_yes_rate": 0.979,
+      "policy_yes_rate": 0.757,
+      "mean_sin_severity": 2.77,
+      "mean_policy_severity": 1.906,
+      "mean_gap": 0.864,
+      "severity_correlation": 0.781,
+      "mcnemar": {
+        "sin_only_b": 155,
+        "policy_only_c": 0,
+        "statistic": 153.00645161290322,
+        "pvalue": 3.8182372986551267e-35,
+        "direction": "more sinful than policy-condemned"
+      },
+      "per_sin": {
+        "pride": {
+          "n": 100,
+          "gap_rate": 0.26,
+          "mean_sin_severity": 2.81,
+          "mean_policy_severity": 1.69,
+          "mean_gap": 1.12,
+          "sin_and_policy": 72,
+          "sin_not_policy": 26,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "greed": {
+          "n": 100,
+          "gap_rate": 0.15,
+          "mean_sin_severity": 3.15,
+          "mean_policy_severity": 2.2,
+          "mean_gap": 0.95,
+          "sin_and_policy": 82,
+          "sin_not_policy": 15,
+          "policy_not_sin": 0,
+          "neither": 3
+        },
+        "lust": {
+          "n": 100,
+          "gap_rate": 0.11,
+          "mean_sin_severity": 3.83,
+          "mean_policy_severity": 2.92,
+          "mean_gap": 0.91,
+          "sin_and_policy": 88,
+          "sin_not_policy": 11,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "envy": {
+          "n": 100,
+          "gap_rate": 0.25,
+          "mean_sin_severity": 2.44,
+          "mean_policy_severity": 1.64,
+          "mean_gap": 0.8,
+          "sin_and_policy": 74,
+          "sin_not_policy": 25,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "gluttony": {
+          "n": 100,
+          "gap_rate": 0.3,
+          "mean_sin_severity": 2.16,
+          "mean_policy_severity": 1.18,
+          "mean_gap": 0.98,
+          "sin_and_policy": 69,
+          "sin_not_policy": 30,
+          "policy_not_sin": 0,
+          "neither": 1
+        },
+        "wrath": {
+          "n": 100,
+          "gap_rate": 0.07,
+          "mean_sin_severity": 2.52,
+          "mean_policy_severity": 2.38,
+          "mean_gap": 0.14,
+          "sin_and_policy": 91,
+          "sin_not_policy": 7,
+          "policy_not_sin": 0,
+          "neither": 2
+        },
+        "sloth": {
+          "n": 100,
+          "gap_rate": 0.41,
+          "mean_sin_severity": 2.48,
+          "mean_policy_severity": 1.33,
+          "mean_gap": 1.15,
+          "sin_and_policy": 54,
+          "sin_not_policy": 41,
+          "policy_not_sin": 0,
+          "neither": 5
+        }
+      },
+      "covariate_regression": {
+        "ols_gap": {
+          "params": {
+            "Intercept": 0.3962,
+            "C(harm_target)[T.others]": 0.3194,
+            "C(harm_target)[T.self]": -0.2286,
+            "C(scope)[T.public]": 0.1766,
+            "C(legality)[T.illegal]": -0.3568,
+            "C(legality)[T.legal]": 0.494
+          },
+          "pvalues": {
+            "Intercept": 0.0094,
+            "C(harm_target)[T.others]": 0.0143,
+            "C(harm_target)[T.self]": 0.0902,
+            "C(scope)[T.public]": 0.0311,
+            "C(legality)[T.illegal]": 0.0015,
+            "C(legality)[T.legal]": 0.0
+          },
+          "rsquared": 0.1001
+        }
+      }
+    }
+  },
+  "subject_comparison": {
+    "subjects": [
+      "abstract",
+      "user",
+      "self"
+    ],
+    "self_minus_user_policy_yes_rate": 0.069,
+    "self_minus_user_sin_yes_rate": 0.004,
+    "self_exemption": {
+      "n_acts_paired": 700,
+      "user_sinful_acts": 682,
+      "self_exempted_from_those": 3,
+      "self_exemption_rate": 0.004,
+      "mean_sin_severity_user": 2.686,
+      "mean_sin_severity_self": 2.77,
+      "self_sin_category_error_rate": 0.001
+    }
+  }
+}
